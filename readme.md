@@ -7,11 +7,11 @@ Chinese Language Generation Evaluation 中文生成任务基准测评
 ## 一键运行
 
 ```
-1、克隆项目 
+1、克隆项目
    git clone --depth=1 https://github.com/CLUEbenchmark/CLGE.git
 2、下载任务数据集并解压至 CLGEdataset，进入到相应任务的目录
    例如运行 csl 任务
-       cd CLGE/tasks/csl  
+       cd CLGE/tasks/csl
 3、运行对应任务的脚本: 会自动安装依赖、下载模型并开始运行。
        sh run_bert_base.sh
    如运行 sh run_bert_base.sh 会开始 csl 任务在 BERT_base 上的训练
@@ -74,7 +74,8 @@ rouge-l 根据生成文本和参考文本之间的最长公共子序列得出
 |    RoBERTa-wwm-ext    |  58.99  | 63.23 | 50.74 | 41.31 |  batch_size=8, length=256, epoch=10, lr=1e-5 |
 |   RoBERTa-wwm-large   |  -  | - | - | - |  batch_size=4, length=256, epoch=10, lr=1e-5 |
 |     LSTM-seq2seq      |  41.80  | 46.48 | 30.48 | 22.00 |  batch_size=64, length=256, epoch=20, lr=1e-3 |
-
+|     GPT2-Chinese      |  51.47  | 51.81 | 41.61 | 33.74 |  batch_size=2, epoch=20, lr=1e-5 |
+|     GPT2-ML           |  48.18  | 35.37 | 25.42 | 14.02 | zero-shot learning |
 
 ### **2. LCSTS 短文本摘要生成**
 
@@ -115,7 +116,7 @@ https://arxiv.org/abs/1506.05865
 {
     'question': '《齐民要术》的作者贾思勰是那个时代的人？',
     {
-        'answer': '', 
+        'answer': '',
         'passage': '在古代农学发展史上，贾思勰所著《齐民要术》是古代农学体系形成的标志。'
     },
     {
